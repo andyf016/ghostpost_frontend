@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 class App extends React.Component {
@@ -9,6 +8,13 @@ class App extends React.Component {
       posts: []
     }
   }
+
+  componentDidMount(){
+    fetch('http://127.0.0.1:8000/api/') // TODO: complete url
+    .then((res) => res.json())
+    .then((data) => this.setState({posts: data.results}))
+  }
+
   render(){
     return (
     <div className="App">
