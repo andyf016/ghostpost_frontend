@@ -10,9 +10,9 @@ class App extends React.Component {
   }
 
   componentDidMount(){
-    fetch('http://127.0.0.1:8000/api/') // TODO: complete url
+    fetch('http://127.0.0.1:8000/api/post/') 
     .then((res) => res.json())
-    .then((data) => this.setState({posts: data.results}))
+    .then((data) => this.setState({posts: data}))
   }
 
   render(){
