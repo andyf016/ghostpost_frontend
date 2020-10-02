@@ -37,7 +37,6 @@ class All extends React.Component {
                 {this.state.post.map(p =>
                     <div>
                         <br/>
-                <li>{p.id}</li>
                         <li>{p.sentiment}</li>
                         <li>{p.body}</li>
                         <li>Total Votes: {p.total_votes}</li>
