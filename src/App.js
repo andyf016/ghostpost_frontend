@@ -5,19 +5,14 @@ class App extends React.Component {
   constructor(props){
     super(props);
     this.state = {
+      sort: 'all',
       posts: []
     }
   }
 
-  componentDidMount(){
-    fetch('http://127.0.0.1:8000/api/post/') 
-    .then((res) => res.json())
-    .then((data) => this.setState({posts: data}))
-  }
-
   render(){
     return (
-    <div className="App">
+    <div >
       <ul>
      {this.state.posts.map(p => (
        <li>{p.body}</li>
@@ -26,8 +21,9 @@ class App extends React.Component {
      </ul>
     </div>
   );
-  }
-  
+  }  
 }
+
+
 
 export default App;
