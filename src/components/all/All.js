@@ -1,5 +1,5 @@
 import React from 'react';
-import PostCard from '../post-card/PostCard'
+
 class All extends React.Component {
     constructor(props){
         super(props);

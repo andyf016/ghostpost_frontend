@@ -1,6 +1,7 @@
 import React from 'react';
 import SortBy from './components/sort-by/SortBy'
 import './App.css';
+import PostForm from './components/post-form/PostForm';
 
 
 class App extends React.Component {
@@ -37,6 +38,7 @@ class App extends React.Component {
       <button onClick={() => this.handleRoast()}>Roasts</button>
       <button onClick={() => this.handleBoast()}>Boasts</button>
       <button onClick={() => this.handleHighest()}>Highest Rated</button>
+      <PostForm />
       <SortBy sort={this.state.sort} />
     </div>
   );
