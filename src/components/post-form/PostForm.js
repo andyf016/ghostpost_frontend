@@ -7,7 +7,7 @@ class PostForm extends React.Component {
       super(props);
       this.state = {
           sentiment: 'b',
-          body: 'Post here',
+          body: '',
       };
       
       this.handleSentiment =  this.handleSentiment.bind(this);
@@ -41,8 +41,8 @@ class PostForm extends React.Component {
               console.log(response)
               return response.json()
           })
-      
-      event.preventDefault();
+        event.preventDefault();
+        this.setState({sentiment: 'b', body: ''})
     }
   
     render() {

@@ -29,6 +29,10 @@ class App extends React.Component {
     this.setState({sort: 'all'})
   }
 
+  handlePost(){
+    this.setState({sort: 'post'})
+  }
+
   
 
   render(){
@@ -38,7 +42,8 @@ class App extends React.Component {
       <button onClick={() => this.handleRoast()}>Roasts</button>
       <button onClick={() => this.handleBoast()}>Boasts</button>
       <button onClick={() => this.handleHighest()}>Highest Rated</button>
-      <PostForm />
+      <button onclick={() => this.handlePost()}>New Post</button>
+       
       <SortBy sort={this.state.sort} />
     </div>
   );
