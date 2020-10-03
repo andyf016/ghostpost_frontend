@@ -20,13 +20,12 @@ class PostForm extends React.Component {
 
 
     handleChange(event) {
-        console.log(event.target.value)
+
       this.setState({body: event.target.value});
     }
   
     handleSentiment(event) {
-        console.log(event.target.value)
-        //event.preventDefault()
+
         this.setState({sentiment: event.target.value})
     }
 
@@ -41,8 +40,10 @@ class PostForm extends React.Component {
               console.log(response)
               return response.json()
           })
-        event.preventDefault();
-        this.setState({sentiment: 'b', body: ''})
+          .then(function(response){
+              this.setState({body:''})
+          })
+    this.setState({body: ''})
     }
   
     render() {

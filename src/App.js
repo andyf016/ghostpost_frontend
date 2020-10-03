@@ -42,7 +42,7 @@ class App extends React.Component {
       <button onClick={() => this.handleRoast()}>Roasts</button>
       <button onClick={() => this.handleBoast()}>Boasts</button>
       <button onClick={() => this.handleHighest()}>Highest Rated</button>
-      <button onclick={() => this.handlePost()}>New Post</button>
+      <button onClick={() => this.handlePost()}>New Post</button>
        
       <SortBy sort={this.state.sort} />
     </div>
