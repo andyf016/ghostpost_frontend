@@ -40,10 +40,9 @@ class PostForm extends React.Component {
               console.log(response)
               return response.json()
           })
-          .then(function(response){
-              this.setState({body:''})
-          })
-    this.setState({body: ''})
+        //event.preventDefault();
+        console.log('x')
+    //this.setState({body: ''})
     }
   
     render() {
