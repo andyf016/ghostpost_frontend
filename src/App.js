@@ -1,7 +1,7 @@
 import React from 'react';
 import SortBy from './components/sort-by/SortBy'
 import './App.css';
-import PostForm from './components/post-form/PostForm';
+
 
 
 class App extends React.Component {
